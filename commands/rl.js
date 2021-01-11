@@ -2,17 +2,17 @@ exports.run = (client, message, args) => {
   const config = require("../config.json");
   if (message.member.id !== config.ownerid) {
     return (
-      message.reply(`no u`),
+      message.reply(\`*loads ak\* if you dont stop trying ill shoot you`),
       console.log(
-        `${message.member.user.tag} (${message.member.user.id}) isnt the owner smfh`
+        `${message.member.user.tag} isnt the owner and tried to rl smfh`
       )
     );
   }
   if (!args || args.length < 1) {
     return (
-      message.reply(`fr?`),
+      message.reply(`fr? \*loads glock\*`),
       console.log(
-        `${message.member.user.tag} (${message.member.user.id}), fr? gib me sth or die`
+        `hey you give me something real to rl`
       )
     );
   }
@@ -23,6 +23,6 @@ exports.run = (client, message, args) => {
   client.commands.set(commandName, props);
   message.reply(`*loads gun* got it`);
   console.log(
-    `bui bui ${message.member.user.tag} (${message.member.user.id}) reloaded ${args}`
+    `bui bui rl\'ed ${args}`
   );
 };
