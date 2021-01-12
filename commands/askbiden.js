@@ -5,6 +5,11 @@ exports.run = (client, message, args) => {
     "Folks, do you have any idea what this clown is doing?",
     "And him, too.",
     "FLY WILL VOTE",
+    "You’ve treated the Black community about as bad as anybody in this country.",
+    "Do it, do it. ",
+    "Vote, vote, vote. ",
+    "That’ll be the end of it. ",
+    ""
   ];
   const pics = [
     "https://api.time.com/wp-content/uploads/2019/09/joe-biden-ukraine-fundraising.jpg?w=800&quality=85",
@@ -19,6 +24,6 @@ exports.run = (client, message, args) => {
       }`
     )
     .setThumbnail(pics[Math.floor(Math.random() * pics.length)])
-    .setColor(colours[Math.floor(Math.random() * colour.length)]);
+    .setColor(colours[Math.floor(Math.random() * colours.length)]);
   message.channel.send(embed);
 };
