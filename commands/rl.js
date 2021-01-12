@@ -1,4 +1,5 @@
 exports.run = (client, message, args) => {
+  const commandName = args[0];
   const config = require("../config.json");
   if (message.member.id !== config.ownerid) {
     return (
@@ -12,7 +13,14 @@ exports.run = (client, message, args) => {
     return (
       message.reply(`fr? \*loads glock\*`),
       console.log(
-        `hey you give me something real to rl`
+        `${message.member.user.tag} used rl but didnt give a command smfh`
+      )
+    );
+  } else if (!client.commands.has(commandName)) {
+    return (
+      message.reply("are you stupid or are you stupid"),
+      console.log(
+        `${message.member.user.tag} used rl but didnt give a command smfh`
       )
     );
   } else {
@@ -22,8 +30,6 @@ exports.run = (client, message, args) => {
     const props = require(`./${commandName}.js`);
     client.commands.set(commandName, props);
     message.reply(`\*loads gun\* got it`);
-    console.log(
-      `bui bui rl\'ed ${args}`
-    );
+    console.log(`bui bui rl\'ed ${args}`);
   }
 };
