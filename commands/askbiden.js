@@ -23,6 +23,14 @@ exports.run = (client, message, args) => {
   ];
   const colours = ["#00300a", "#507248", "#380909", "#2b092a", "#180228"];
   const text = args.join(" ");
+  if (!args || args.length < 1) {
+    return (
+      message.reply(`You need something to ask Biden.`),
+      console.log(
+        `${message.member.user.tag} used askbiden but didnt give a question smfh`
+      )
+    );
+  }
   const embed = new Discord.MessageEmbed()
     .setTitle("Ask Biden")
     .setDescription(
@@ -33,4 +41,5 @@ exports.run = (client, message, args) => {
     .setThumbnail(pics[Math.floor(Math.random() * pics.length)])
     .setColor(colours[Math.floor(Math.random() * colours.length)]);
   message.channel.send(embed);
+  console.log(`${message.member.user.tag} askbiden'ed about ${args}`)
 };
