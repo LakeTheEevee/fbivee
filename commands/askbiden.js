@@ -41,5 +41,5 @@ exports.run = (client, message, args) => {
     .setThumbnail(pics[Math.floor(Math.random() * pics.length)])
     .setColor(colours[Math.floor(Math.random() * colours.length)]);
   message.channel.send(embed);
-  console.log(`${message.member.user.tag} askbiden'ed about ${args}`)
+  console.log(`${message.member.user.tag} used askbiden about ${args}`)
 };
