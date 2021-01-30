@@ -1,5 +1,5 @@
-exports.run = (client, message, args) => {
-  const Discord = require("discord.js");
+module.exports.run = async (client, message, args) => {
+    const Discord = require("discord.js");
   const responses = [
     "Will you shut up, man?",
     "Folks, do you have any idea what this clown is doing?",
@@ -42,4 +42,9 @@ exports.run = (client, message, args) => {
     .setColor(colours[Math.floor(Math.random() * colours.length)]);
   message.channel.send(embed);
   console.log(`${message.member.user.tag} used askbiden about ${text}`)
+};
+module.exports.help = {
+    name: "askbiden",
+    description: "askbiden command",
+    aliases: ["ab", "ask"]
 };

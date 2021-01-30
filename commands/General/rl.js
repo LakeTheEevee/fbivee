@@ -1,6 +1,6 @@
-exports.run = (client, message, args) => {
+module.exports.run = async (client, message, args) => {
   const commandName = args[0];
-  const config = require("../config.json");
+  const config = require("../../config.js");
   if (message.member.id !== config.ownerid) {
     return (
       message.reply(`\*loads ak\* if you dont stop trying ill shoot you`),
@@ -32,4 +32,10 @@ exports.run = (client, message, args) => {
     message.reply(`\*loads gun\* got it`);
     console.log(`bui bui rl\'ed ${args}`);
   }
+};
+
+module.exports.help = {
+  name: "nickbet",
+  description: "Ping command",
+  aliases: ["nb"]
 };

@@ -1,5 +1,5 @@
-exports.run = (client, message, args) => {
-    const config = require("../config.json")
+module.exports.run = async (client, message, args) => {
+    const config = require("../../config.json")
     message.channel.send(`Hi! My Prefix is \`.\`
     There are currently 5 commands:
     Useful:
@@ -17,3 +17,8 @@ exports.run = (client, message, args) => {
     console.log(`${message.member.user.tag} activated the admin help pog pog pog`)
     }
 }
+module.exports.help = {
+    name: "help",
+    description: "Ping command",
+    aliases: ["help"]
+};
