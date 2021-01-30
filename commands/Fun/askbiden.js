@@ -45,6 +45,6 @@ module.exports.run = async (client, message, args) => {
 };
 module.exports.help = {
     name: "askbiden",
-    description: "askbiden command",
+    description: "askbiden - Asks Biden what you said and get a random picture and response!",
     aliases: ["ab", "ask"]
 };

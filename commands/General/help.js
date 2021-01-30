@@ -1,16 +1,17 @@
 module.exports.run = async (client, message, args) => {
-    const config = require("../../config.json")
+    const config = require("../../config.js")
     message.channel.send(`Hi! My Prefix is \`.\`
     There are currently 5 commands:
-    Useful:
+    General:
     - help
     - ping
     Fun:
     - askbiden
     - echo
-    - nickbet (:construction_worker: :hammer_and_wrench: Work In Progress, Crashes)`)
+    - nickbet (:construction_worker: :hammer_and_wrench: Work In Progress, Crashes)
+    - reverse`)
     console.log(`${message.member.user.tag} used help`)
-    if(message.author.id == config.ownerid) {
+    if(message.author.id == config.OWNERID) {
     message.channel.send (`Hey psst!
     Admin:
     - rl`)
@@ -19,6 +20,6 @@ module.exports.run = async (client, message, args) => {
 }
 module.exports.help = {
     name: "help",
-    description: "Ping command",
-    aliases: ["help"]
+    description: "Help command!",
+    aliases: ["h"]
 };

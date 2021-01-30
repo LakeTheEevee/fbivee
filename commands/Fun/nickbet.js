@@ -25,6 +25,6 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.help = {
     name: "nickbet",
-    description: "Ping command",
+    description: "Nickbet - 2 people choose the nickname the other needs to change to when they lose, then they flip a coin. (concept)",
     aliases: ["nb"]
 };
