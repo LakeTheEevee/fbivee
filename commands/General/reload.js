@@ -1,7 +1,7 @@
 module.exports.run = async (client, message, args) => {
   const commandName = args[0];
   const config = require("../../config.js");
-  if (message.member.id !== config.ownerid) {
+  if (message.member.id !== config.OWNERID) {
     return (
       message.reply(`\*loads ak\* if you dont stop trying ill shoot you`),
       console.log(
@@ -35,7 +35,7 @@ module.exports.run = async (client, message, args) => {
 };
 
 module.exports.help = {
-  name: "nickbet",
-  description: "Ping command",
-  aliases: ["nb"]
+  name: "reload",
+  description: "Reloads commands",
+  aliases: ["rl"]
 };

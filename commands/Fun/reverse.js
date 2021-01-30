@@ -7,6 +7,6 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.help = {
     name: "reverse",
-    description: "Reverse command",
-    aliases: []
+    description: "Reverses the input text.",
+    aliases: ["rv"]
 };
