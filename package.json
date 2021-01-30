@@ -1,20 +1,19 @@
 {
-  "name": "fbivee",
-  "version": "0.0.1",
-  "description": "FBI Eevee Bot - Created and Maintained by Lake The Eevee#8584",
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "Simple discord bot created with create-discord-app",
   "main": "index.js",
-  "dependencies": {
-    "discord.js": "^12.5.1",
-    "enmap": "^5.8.2",
-    "fs": "^0.0.1-security"
-  },
-  "devDependencies": {
-    "prettier": "2.2.1"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .",
+    "dev": "nodemon ."
   },
-  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "discord.js": "^12.4.1",
+    "dotenv": "^8.2.0"
+  }
 }

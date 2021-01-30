@@ -1,4 +1,4 @@
-exports.run = (client, message, args) => {
+module.exports.run = async (client, message, args) => {
     const target = message.mentions.members.first();
     const filter = message => message.content.includes('');
     const collector = message.channel.createMessageCollector(filter, { max: 1, time: 15000 });
@@ -22,3 +22,9 @@ exports.run = (client, message, args) => {
         }
     });
 }
+
+module.exports.help = {
+    name: "nickbet",
+    description: "Ping command",
+    aliases: ["nb"]
+};
