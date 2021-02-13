@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
             db.add(message.author.id+".balance", get)
         }
     } else {
-        message.channel.send("You haven't started playing currency commands yet!\n,Do `.start` to start!")
+        message.channel.send("You haven't started playing currency commands yet!\nDo `.start` to start!")
     }
 };
 module.exports.help = {
