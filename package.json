@@ -9,12 +9,11 @@
   },
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "nodemon": "^2.0.6"
-  },
+  "devDependencies": {},
   "dependencies": {
     "discord.js": "^12.4.1",
     "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7",
     "quickmongo": "^3.0.0"
   }
 }
