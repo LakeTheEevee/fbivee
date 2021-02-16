@@ -8,7 +8,7 @@
     "node": "node ."
   },
   "author": "",
-  "license": "CC4.0",
+  "license": "CC-BY-NC-4.0",
   "devDependencies": {},
   "dependencies": {
     "discord.js": "^12.4.1",
