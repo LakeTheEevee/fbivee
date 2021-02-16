@@ -8,7 +8,7 @@
     "node": "node ."
   },
   "author": "",
-  "license": "MIT",
+  "license": "CC4.0",
   "devDependencies": {},
   "dependencies": {
     "discord.js": "^12.4.1",
