@@ -2,6 +2,7 @@ module.exports.run = async (client, message, args) => {
   const config = require("../../config.js");
   const { Database } = require("quickmongo");
   const db = new Database(config.DBURL);
+  const curr = db.createModel("currency");
   const eargs = message.content.split(" ").slice(1);
   if (message.author.id !== config.OWNERID) return;
   try {
