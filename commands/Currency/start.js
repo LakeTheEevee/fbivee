@@ -3,8 +3,9 @@ module.exports.run = async (client, message, args) => {
   const Discord = require("discord.js");
   const { Database } = require("quickmongo");
   const db = new Database(config.DBURL);
+  const curr = db.createModel("currency");
   const id = message.author.id;
-  if ((await db.exists(id)) === true) {
+  if ((await curr.exists(id)) === true) {
     message.channel.send("You have already created a profile!");
   } else {
     let filter = m => m.author.id === message.author.id
@@ -21,7 +22,7 @@ module.exports.run = async (client, message, args) => {
           message = message.first()
           if (message.content.toLowerCase() == 'yes') {
             message.channel.send(`Cool! Welcome to currency commands!`)
-            db.add(id+".balance", 500)
+            curr.add(id+".balance", 500)
           } else if (message.content.toLowerCase() == 'no') {
             message.channel.send(`Alright, let's pretend you never asked.`)
           } else {
