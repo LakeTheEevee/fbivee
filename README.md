@@ -1,4 +1,4 @@
-# fbivee
-
-FBI Eevee - Created by Lake The Eevee#5624<br>
-I keep getting requested commands so here they are smfh
+# FBIVee Discord Bot
+FBIVee - Created by Lake The Eevee#5624<br>
+Open source Discord bot<br>
+Trello[Here](https://trello.com/b/tjY74sr3/todo)
