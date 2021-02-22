@@ -1,7 +1,3 @@
-////////////////////////////////////////////
-/////         Create Discord App       /////
-////////////////////////////////////////////
-
 require("dotenv").config();
 const Discord = require("discord.js");
 const client = new Discord.Client();
@@ -59,6 +55,7 @@ client.on("message", async (message) => {
     if (!command) return;
 
     try {
+        if (message.channel.type === 'dm') return
         await command.run(client, message, args);
     } catch(e) {
         console.error(e);

@@ -23,5 +23,5 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
   name: "reload",
   description: "Reloads commands",
-  aliases: ["rl"]
+  aliases: ["rl"],
 };
