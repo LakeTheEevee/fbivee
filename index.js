@@ -39,7 +39,7 @@ fs.readdir(`${__dirname}/commands`, (error, ctg) => {
 
 // basic events
 client.on("ready", () => {
-    console.log("Bot is online!");
+    console.log(`I'm ready! (${client.guilds.cache.size} servers)`);
 });
 client.on("warn", console.warn);
 client.on("error", console.error);
