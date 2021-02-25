@@ -40,6 +40,10 @@ fs.readdir(`${__dirname}/commands`, (error, ctg) => {
 // basic events
 client.on("ready", () => {
     console.log(`I'm ready! (${client.guilds.cache.size} servers)`);
+    // custom status
+    client.user.setActivity(`${config.PREFIX}ping` , { type: 'LISTENING' })
+    .then(presence => console.log(`Activity set to ${presence.activities[0].name}`))
+    .catch(console.error);
 });
 client.on("warn", console.warn);
 client.on("error", console.error);
@@ -62,5 +66,6 @@ client.on("message", async (message) => {
         message.channel.send(`Something went wrong while executing command "**${command}**"!`);
     }
 });
+
 
 client.login(config.TOKEN);
