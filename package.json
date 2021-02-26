@@ -12,10 +12,12 @@
   "devDependencies": {},
   "dependencies": {
     "@discordjs/opus": "^0.4.0",
+    "discord-pages": "^1.0.2",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.7",
     "quickmongo": "^3.0.0",
+    "rgb-random-color": "^1.0.1",
     "sodium": "^3.0.2"
   }
 }
